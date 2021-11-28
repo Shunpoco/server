@@ -321,4 +321,18 @@ my_uca_implicit_weight_on_level(uint version, my_wc_t code, uint level)
 }
 
 
+uint
+my_uca1400_make_builtin_collation_id(uint charset_id,
+                                     uint tailoring_id,
+                                     my_bool nopad,
+                                     my_bool secondary_level,
+                                     my_bool tertiary_level);
+
+my_bool
+my_uca1400_collation_definition_init(MY_CHARSET_LOADER *loader,
+                                     struct charset_info_st *dst,
+                                     uint collation_id);
+
+#define MY_UCA_NAMED_TAILORINGS_COUNT 25
+
 #endif /* CTYPE_UCA_H */
